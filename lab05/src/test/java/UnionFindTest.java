@@ -47,10 +47,13 @@ public class UnionFindTest {
     @Test
     public void basicUnionTest() {
         UnionFind uf = new UnionFind(10);
+        // [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+
         uf.union(0, 1);
         assertThat(uf.find(0)).isEqualTo(1);
         uf.union(2, 3);
         assertThat(uf.find(2)).isEqualTo(3);
+
         uf.union(0, 2);
         assertThat(uf.find(1)).isEqualTo(3);
 
